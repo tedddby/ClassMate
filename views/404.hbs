@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Page Not Found</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 0.8s ease-in-out;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .header {
+            background-color: #5865F2;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .theme-clr-txt {
+            color: #5865F2;
+        }
+
+        .error-box {
+            text-align: center;
+            padding: 60px 20px;
+            margin: auto;
+            background-color: white;
+            max-width: 500px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            animation: slideUp 0.8s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .error-title {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #5865F2;
+        }
+
+        .error-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .error-box p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .error-btn {
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #5865F2;
+            padding: 10px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-btn:hover {
+            background-color: white;
+            color: #5865F2;
+            border: 2px solid #5865F2;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer {
+            background-color: #5865F2;
+            color: #FFFFFF !important;
+            text-align: center;
+            padding: 20px 15px;
+            width: 100%;
+        }
+
+        .footer-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+        }
+
+        .footer-description {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: #FFFFFF;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #d1d5db;
+        }
+
+        .footer-bottom {
+            margin-top: 10px;
+            border-top: 1px solid #FFFFFF;
+            padding-top: 10px;
+            font-size: 12px;
+            color: #FFFFFF !important;
+        }
+    </style>
+</head>
+<body>
+<header class="header shadow">
+    <div class="container d-flex align-items-center">
+        <img src="assets/img/logo/logo2.png" alt="Logo" class="logo">
+        <h3 class="mb-0 theme-clr-txt">ClassMate</h3>
+    </div>
+</header>
+<main>
+    <div class="error-box">
+        <div class="error-title">404</div>
+        <div class="error-subtitle">Page Not Found</div>
+        <p>Sorry, <i class="theme-clr-txt">{{ path }}</i> doesn't exist or has been moved. Try returning to the homepage.</p>
+        <a href="./" class="error-btn">Go Home</a>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-wrapper">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="./"><img src="assets/img/logo/logo2.png" alt="Logo"></a>
+            </div>
+            <p class="footer-description" style="color: white">Your All-in-One Study Companion.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="color: white">&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | IT Department</p>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/jquery.sticky.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

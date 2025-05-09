@@ -1,0 +1,278 @@
+/* General Styles */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures full height for flex layout */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Content Wrapper */
+#main-content {
+    flex: 1; /* Fills available space between header and footer */
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+.header .logo {
+    height: 40px;
+}
+
+.header .header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-buttons button {
+    margin-left: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.theme-clr-bg{
+    background-color: #5865F2
+}
+
+.theme-clr-txt{
+    color: #2C2F33;
+}
+
+.theme-clr-txt-2{
+    color: #5865F2;
+}
+
+.theme-clr-btn {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: 2px solid #5865F2;
+    cursor: pointer;
+}
+
+.theme-clr-btn:hover {
+    color: #5865F2;
+    background-color: white;
+}
+
+.theme-clr-btn-border {
+    color: #5865F2;
+    border: 2px solid #5865F2;
+    background-color: white;
+}
+
+.theme-clr-btn-border:hover {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Responsive Header */
+@media (max-width: 992px) {
+    /* Tablet screens */
+    .header {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+        height: 35px; /* Slightly smaller logo */
+    }
+
+    .header .header-buttons {
+        width: 100%; /* Take full width */
+        justify-content: flex-start;
+    }
+
+    .header .header-buttons button {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Small screens */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .header .header-buttons {
+        flex-direction: column;
+        gap: 10px; /* Spacing between buttons */
+        width: 100%;
+    }
+
+    .header .header-buttons button {
+        width: 100%; /* Buttons become full-width */
+    }
+}
+
+/* Notifications Sidebar */
+#notifications-sidebar {
+    position: fixed;
+    top: 60px;
+    right: -350px;
+    width: 300px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    transition: 0.3s ease;
+    z-index: 1050;
+    border-left: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#notifications-sidebar.open {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Course Cards */
+.course-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h5 {
+    font-size: 1.25rem;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+}
+
+.footer {
+    background-color: #5865F2; /* Discord accent color */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-description {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #d1d5db; /* Lighter hover effect */
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #d1d5db;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 576px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+    #courses-grid .col-md-4 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 992px) {
+    #courses-grid .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #courses-grid .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    #notifications-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    #notifications-sidebar.open {
+        right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .course-card h5 {
+        font-size: 1rem;
+    }
+
+    .course-card p {
+        font-size: 0.8rem;
+    }
+}

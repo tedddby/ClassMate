@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    height: 40px;
+}
+
+.theme-clr-bg{
+    background-color: #5865F2
+}
+
+.theme-clr-txt{
+    color: #5865F2;
+}
+
+.theme-clr-btn {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: 2px solid #5865F2;
+    cursor: pointer;
+}
+
+.theme-clr-btn:hover {
+    color: #5865F2;
+    background-color: white;
+}
+
+.theme-clr-btn-border {
+    color: #5865F2;
+    border: 2px solid #5865F2;
+    background-color: white;
+}
+
+.theme-clr-btn-border:hover {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Video Frame */
+.video-frame {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Chat Box */
+.chat-box {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-messages li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.chat-messages li.sent {
+    text-align: right;
+    color: #007bff;
+}
+
+.chat-messages li.received {
+    text-align: left;
+    color: #333;
+}
+
+.card-footer {
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Controls */
+/* Controls */
+.controls {
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Spacing between buttons */
+}
+
+.controls button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    flex: 1; /* Makes buttons grow evenly */
+    max-width: 180px; /* Limits button width */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #5865F2; /* Discord accent color */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-description {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #d1d5db; /* Lighter hover effect */
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #d1d5db;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .video-frame {
+        height: 400px;
+    }
+
+    .chat-box {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-frame {
+        height: 300px;
+    }
+
+    .chat-box {
+        height: 300px;
+    }
+
+    .controls button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .chat-box {
+        height: 250px;
+    }
+
+    .video-frame {
+        height: 250px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Responsive Controls */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Stretch buttons to full width */
+    }
+
+    .controls button {
+        max-width: 100%; /* Ensure full width for smaller screens */
+        padding: 10px; /* Adjust padding for better fit */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}

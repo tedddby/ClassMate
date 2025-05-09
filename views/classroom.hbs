@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassMate | Classroom</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/conference.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header theme-clr-bg text-white py-3 shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img src="assets/img/logo/logo2.png" alt="Logo" class="logo" style="height: 40px; margin-right: 15px;">
+        </div>
+        <button class="genric-btn danger-border circle" id="end-meeting-btn">End Classroom</button>
+    </div>
+</header>
+<!-- Main Content -->
+<main class="container-fluid mt-3" id="main-content">
+    <h6 id="classroom-id" class="theme-clr-txt">Classroom ID (Used to join): </h6>
+    <p id="presenter" style="display: none" class="theme-clr-txt"></p>
+    <div class="row">
+        <!-- Video Frame -->
+        <div class="col-lg-9 col-md-8 col-sm-12 mb-3 d-flex justify-content-center align-items-center">
+            <div class="video-frame bg-dark text-white d-flex justify-content-center align-items-center">
+                <video id='video-frame-share' autoplay style="width: 100%; height: 500px;">
+                </video>
+            </div>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="chat-box card shadow">
+                <div class="card-header theme-clr-bg text-white">
+                    <h5 style="color: white">Chat <i style="color: white; font-size: small" id="viewers-counter">[0 Watching]</i></h5>
+                </div>
+                <div class="card-body chat-body">
+                    <ul class="chat-messages list-unstyled">
+                        <!-- Chat messages will go here -->
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Type a message..." id="chat-input">
+                        <button class="genric-btn theme-clr-btn-border" id="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="row mt-3">
+        <div class="col-12 d-flex justify-content-center align-items-center controls">
+            <button class="genric-btn theme-clr-btn-border" id="start-btn">Start Classroom</button>
+            <button class="genric-btn theme-clr-btn-border" id="share-screen-btn">Share Screen</button>
+            <button class="genric-btn theme-clr-btn-border" id="mute-btn">Mute \ Unmute</button>
+            <button class="genric-btn theme-clr-btn-border" id="camera-btn">Camera OFF/ON</button>
+            <button class="genric-btn theme-clr-btn-border" id="record-btn">Record Classroom</button>
+        </div>
+    </div>
+    <br>
+    <div id="dashboard-main-container">
+        <div class="row" id="participants-container">
+
+        </div>
+    </div>
+    <br>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-wrapper">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="./"><img src="assets/img/logo/logo2.png" alt="Logo"></a>
+            </div>
+            <p class="footer-description" style="color: white">Your All-in-One Study Companion.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="color: white">&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | IT Department</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://sdk.videosdk.live/js-sdk/0.0.86/videosdk.js"></script>
+
+<script src="./assets/js/custom/classroom.js"></script>
+
+
+<!-- JS here -->
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
+<!-- Date Picker -->
+<script src="./assets/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./assets/js/jquery.barfiller.js"></script>
+<!-- counter , waypoint,Hover Direction -->
+<script src="./assets/js/jquery.counterup.min.js"></script>
+<script src="./assets/js/waypoints.min.js"></script>
+<script src="./assets/js/jquery.countdown.min.js"></script>
+<script src="./assets/js/hover-direction-snake.min.js"></script>
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+<!-- Jquery Plugins, main Jquery -->
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>

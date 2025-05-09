@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    height: 40px;
+}
+
+.theme-clr-bg{
+    background-color: #5865F2
+}
+
+.theme-clr-txt{
+    color: #5865F2;
+}
+
+.theme-clr-btn {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: 2px solid #5865F2;
+    cursor: pointer;
+}
+
+.theme-clr-btn:hover {
+    color: #5865F2;
+    background-color: white;
+}
+
+.theme-clr-btn-border {
+    color: #5865F2;
+    border: 2px solid #5865F2;
+    background-color: white;
+}
+
+.theme-clr-btn-border:hover {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+/* Login Title */
+.login-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Login Box */
+.login-box {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Login Button */
+#login-btn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+.footer {
+    background-color: #5865F2; /* Discord accent color */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-description {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #d1d5db; /* Lighter hover effect */
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #d1d5db;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 15px;
+    }
+
+    #login-btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
